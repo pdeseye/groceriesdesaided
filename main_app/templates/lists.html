@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<section class="card-container">
+  {% for list in lists %}
+    <div class="card">
+      <div class="card-content">
+        <a href="/lists/123">
+          <h2 class="card-title">{{ list.name }}</h2>
+        </a>
+      </div>
+    </div>
+  {% endfor %}
+</section>
+
+{% endblock %}
