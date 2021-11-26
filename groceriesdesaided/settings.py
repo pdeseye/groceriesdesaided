@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'groceriesdesaided.wsgi.application'
 DATABASES = {
 	'default': {
 		'ENGINE': 'django.db.backends.postgresql',
-		'NAME': 'groceriesdeasaided',
+		'NAME': 'groceriesdesaided',
 	}
 }
 

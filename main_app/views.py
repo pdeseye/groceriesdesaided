@@ -3,7 +3,10 @@ from django.shortcuts import render
 # Add the following import
 from django.http import HttpResponse
 
+
 # Add the Cat class & list and view function below the imports
+
+
 class List:  # Note that parens are optional if not inheriting from another class
   def __init__(self, userId, name, createdAt ):
     self.name = name
@@ -29,7 +32,7 @@ items = [
 
 # Define the home view
 def home(request):
-  return HttpResponse('<h1>Hello ᓚᘏᗢ</h1>')
+  return render(request, 'home.html')
 def lists(request):
   return render(request, 'lists.html', { 'lists': listsArray })
 def list(request, list_id):
