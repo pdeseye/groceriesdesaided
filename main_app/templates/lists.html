@@ -13,6 +13,10 @@
         </a>
       </div>
     </div>
+    <div class="cat-actions">
+      <a href="{% url 'lists_update' list.id %}" class="btn warn">Edit</a>
+      <a href="{% url 'lists_delete' list.id %}" class="btn danger">Delete</a>
+    </div>
   {% endfor %}
 </section>
 
