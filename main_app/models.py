@@ -13,7 +13,7 @@ class List(models.Model):
     return self.name
 
   def get_absolute_url(self):
-    return reverse('list_detail', kwargs={'list_id': self.id})
+    return reverse('lists_form', kwargs={'list_id': self.id})
 
 class Item(models.Model):
   name = models.CharField(max_length=100)
@@ -22,4 +22,4 @@ class Item(models.Model):
     return self.name
 
   def get_absolute_url(self):
-    return reverse('item_detail', kwargs={'item_id': self.id})
+    return reverse('items_detail', kwargs={'item_id': self.id})
