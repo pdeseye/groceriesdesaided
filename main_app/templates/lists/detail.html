@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link 
+  rel="stylesheet" 
+  type="text/css" 
+  href="{% static 'css/list-detail.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+
+<section class="list-container">
+  {% comment %} <div class="cat-img">
+    <img 
+      src="{% static 'images/sk8r-boi-cat.svg' %}" 
+      alt="A skater boy cat"
+    >
+  </div> {% endcomment %}
+  <div class="list-details">
+    <h1>hello</h1>
+  </div>
+</section>
+
+{% endblock %}
