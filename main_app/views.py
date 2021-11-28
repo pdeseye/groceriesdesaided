@@ -5,23 +5,25 @@ from .forms import GroceryForm
 from django.contrib.auth.views import LoginView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
-
-# Add the following import
-from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Define the home view
 class Home(LoginView):
   template_name = 'home.html'
 
+@login_required
 def lists_index(request):
   lists = List.objects.all()#.filter(user=request.user)
   return render(request, 'lists/index.html', { 'lists': lists })
 
+@login_required
 def lists_detail(request, list_id):
   list = List.objects.get(id=list_id)
   grocery_form = GroceryForm()
   return render(request, 'lists/detail.html', { 'list': list, 'grocery_form': grocery_form })
 
+@login_required
 def add_grocery(request, list_id):
   form = GroceryForm(request.POST)
   # validate the form
@@ -31,7 +33,7 @@ def add_grocery(request, list_id):
     new_grocery.save()
   return redirect('lists_detail', list_id=list_id)
 
-class ListCreate(CreateView):
+class ListCreate(LoginRequiredMixin, CreateView):
   model = List
   fields = '__all__'
   success_url = '/lists/'
@@ -39,12 +41,12 @@ class ListCreate(CreateView):
     form.instance.user = self.request.user  # form.instance is the cat
     return super().form_valid(form)
 
-class ListUpdate(UpdateView):
+class ListUpdate(LoginRequiredMixin, UpdateView):
   model = List
   fields = '__all__'
   success_url = '/lists/'
 
-class ListDelete(DeleteView):
+class ListDelete(LoginRequiredMixin, DeleteView):
   model = List
   success_url = '/lists/'
 
