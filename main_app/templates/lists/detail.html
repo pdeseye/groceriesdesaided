@@ -56,8 +56,7 @@
       {{ grocery_form.as_p }}
       <button type="submit" class="btn submit">Add Grocery Item</button>
     </form>
-    <h3>Past Groceries</h3>
-    <table>
+    {% if list.grocery_set.all.count %}
     <table>
       <thead>
         <tr><th>Date</th><th>Item</th></tr>
@@ -71,6 +70,11 @@
         {% endfor %}
       </tbody>
     </table>
+    {% else %}
+			<div class="subsection-content">
+        <p>{{list.name}} has no items 😔</p>
+      </div>
+    {% endif %}
   </div>
 </section>
 

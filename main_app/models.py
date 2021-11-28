@@ -24,8 +24,6 @@ class Grocery(models.Model):
 
   def __str__(self):
     return f"{self.item} on {self.date}"
-  # def __str__(self):
-  #   return self.name
 
-  # def get_absolute_url(self):
-  #   return reverse('items_detail', kwargs={'item_id': self.id})
+  class Meta:
+    ordering = ['-date']
