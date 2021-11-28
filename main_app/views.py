@@ -9,9 +9,9 @@ from django.http import HttpResponse
 def home(request):
   return render(request, 'home.html')
 
-def lists(request):
+def lists_index(request):
   lists = List.objects.all()#.filter(user=request.user)
-  return render(request, 'lists.html', { 'lists': lists })
+  return render(request, 'lists/index.html', { 'lists': lists })
 
 def lists_detail(request, list_id):
   list = List.objects.get(id=list_id)
