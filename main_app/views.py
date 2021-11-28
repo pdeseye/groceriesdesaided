@@ -22,10 +22,3 @@ class ListCreate(CreateView):
   fields = '__all__'
   success_url = '/lists/'
 
-class ListUpdate(UpdateView):
-  model = List
-  fields = '__all__'
-
-class ListDelete(DeleteView):
-  model = List
-  success_url = '/lists/'
