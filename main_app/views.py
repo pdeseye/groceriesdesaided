@@ -13,9 +13,13 @@ def lists(request):
   lists = List.objects.all()#.filter(user=request.user)
   return render(request, 'lists.html', { 'lists': lists })
 
-def list(request, list_id):
-  items = Item.objects.all()#.filter(list=request.list)
-  return render(request, 'list/index.html', { 'items': items})
+def lists_detail(request, list_id):
+  list = List.objects.get(id=list_id)
+  return render(request, 'lists/detail.html', { 'list': list })
+
+# def list(request, list_id):
+#   items = Item.objects.all()#.filter(list=request.list)
+#   return render(request, 'list/index.html', { 'items': items})
 
 class ListCreate(CreateView):
   model = List
