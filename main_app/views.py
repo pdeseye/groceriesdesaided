@@ -29,6 +29,7 @@ class ListCreate(CreateView):
 class ListUpdate(UpdateView):
   model = List
   fields = '__all__'
+  success_url = '/lists/'
 
 class ListDelete(DeleteView):
   model = List
