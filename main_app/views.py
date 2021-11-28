@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import List, Grocery
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .forms import GroceryForm
@@ -19,9 +19,14 @@ def lists_detail(request, list_id):
   grocery_form = GroceryForm()
   return render(request, 'lists/detail.html', { 'list': list, 'grocery_form': grocery_form })
 
-# def list(request, list_id):
-#   items = Item.objects.all()#.filter(list=request.list)
-#   return render(request, 'list/index.html', { 'items': items})
+def add_grocery(request, list_id):
+  form = GroceryForm(request.POST)
+  # validate the form
+  if form.is_valid():
+    new_grocery = form.save(commit=False)
+    new_grocery.list_id = list_id
+    new_grocery.save()
+  return redirect('lists_detail', list_id=list_id)
 
 class ListCreate(CreateView):
   model = List
