@@ -16,14 +16,14 @@ class List(models.Model):
   def get_absolute_url(self):
     return reverse('lists_form', kwargs={'list_id': self.id})
 
-class Item(models.Model):
-  name = models.CharField(max_length=100)
-  date = models.DateField()
+class Grocery(models.Model):
+  item = models.CharField(max_length=100)
+  date = models.DateField('List Date')
 
   list = models.ForeignKey(List, on_delete=models.CASCADE)
 
   def __str__(self):
-    return f"{self.name} on {self.date}"
+    return f"{self.item} on {self.date}"
   # def __str__(self):
   #   return self.name
 

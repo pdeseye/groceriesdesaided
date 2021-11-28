@@ -19,7 +19,36 @@
     >
   </div> {% endcomment %}
   <div class="list-details">
-    <h1>hello</h1>
+    <div class="items-container">
+  <section class="items">
+    <div class="subsection-title">
+      <h2>Items</h2>
+      {% comment %} <img 
+        src="{% static 'images/cat-cone.svg' %}" 
+        alt="An ice cream cone cat"
+      /> {% endcomment %}
+      {% comment %} <img 
+        src="{% static 'images/cat-onigiri.svg' %}"
+        alt="A cat as onigiri"
+      />
+      <img 
+        src="{% static 'images/kitty-kabob.svg' %}" 
+        alt="A kabob of kittens"
+      /> {% endcomment %}
+    </div>
+    <table>
+      <thead>
+        <tr><th>Date</th><th>Item</th></tr>
+      </thead>
+      <tbody>
+        {% for grocery in list.grocery_set.all %}
+          <tr>
+            <td>{{grocery.date}}</td>
+            <td>{{grocery.item}}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </div>
 </section>
 

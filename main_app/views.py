@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import List, Item
+from .models import List, Grocery
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 # Add the following import
