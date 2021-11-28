@@ -10,5 +10,6 @@ urlpatterns = [
   path('lists/<int:pk>/update/', views.ListUpdate.as_view(), name='lists_update'),
   path('lists/<int:pk>/delete/', views.ListDelete.as_view(), name='lists_delete'),
   path('lists/<int:list_id>/add_grocery/', views.add_grocery, name='add_grocery'),
+  path('accounts/signup/', views.signup, name='signup'),
 ]
 
