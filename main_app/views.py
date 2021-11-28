@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import List, Grocery
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from .forms import GroceryForm
 
 # Add the following import
 from django.http import HttpResponse
@@ -15,7 +16,8 @@ def lists_index(request):
 
 def lists_detail(request, list_id):
   list = List.objects.get(id=list_id)
-  return render(request, 'lists/detail.html', { 'list': list })
+  grocery_form = GroceryForm()
+  return render(request, 'lists/detail.html', { 'list': list, 'grocery_form': grocery_form })
 
 # def list(request, list_id):
 #   items = Item.objects.all()#.filter(list=request.list)
