@@ -1,4 +1,9 @@
-size:clamp(8rem, 40vw, 11.2rem);
+.mc-display__day {
+  font-size:clamp(1.6rem, 8vw, 2rem);
+}
+
+.mc-display__date {
+  font-size:clamp(8rem, 40vw, 11.2rem);
 }
 
 .mc-display__month {
