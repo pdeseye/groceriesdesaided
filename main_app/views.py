@@ -2,13 +2,14 @@ from django.shortcuts import render, redirect
 from .models import List, Grocery
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .forms import GroceryForm
+from django.contrib.auth.views import LoginView
 
 # Add the following import
 from django.http import HttpResponse
 
 # Define the home view
-def home(request):
-  return render(request, 'home.html')
+class Home(LoginView):
+  template_name = 'home.html'
 
 def lists_index(request):
   lists = List.objects.all()#.filter(user=request.user)

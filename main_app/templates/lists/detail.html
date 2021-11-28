@@ -32,7 +32,7 @@
     <div class="items-container">
   <section class="items">
     <div class="subsection-title">
-      <h2>Items</h2>
+      <h2>Grocery List</h2>
       {% comment %} <img 
         src="{% static 'images/cat-cone.svg' %}" 
         alt="An ice cream cone cat"
@@ -46,7 +46,7 @@
         alt="A kabob of kittens"
       /> {% endcomment %}
     </div>
-    <h3>Add a Item</h3>
+    <h3>Add an Item</h3>
     <form
       action="{% url 'add_grocery' list.id %}" 
       method="post" 
