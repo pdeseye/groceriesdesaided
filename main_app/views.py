@@ -35,15 +35,15 @@ def add_grocery(request, list_id):
 
 class ListCreate(LoginRequiredMixin, CreateView):
   model = List
-  fields = '__all__'
+  fields = 'name',
   success_url = '/lists/'
   def form_valid(self, form):
-    form.instance.user = self.request.user  # form.instance is the cat
+    form.instance.user = self.request.user
     return super().form_valid(form)
 
 class ListUpdate(LoginRequiredMixin, UpdateView):
   model = List
-  fields = '__all__'
+  fields = 'name',
   success_url = '/lists/'
 
 class ListDelete(LoginRequiredMixin, DeleteView):
@@ -64,4 +64,3 @@ def signup(request):
   context = {'form': form, 'error_message': error_message}
   return render(request, 'signup.html', context)
 
-  
