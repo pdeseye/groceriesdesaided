@@ -46,6 +46,12 @@ body {
   --card-border-radius: 6px;
 }
 
+body {
+  background-image: url('https://data.whicdn.com/images/341694687/original.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 header {
   width: 100%;
   background: var(--nav-bg-ff);
@@ -98,6 +104,8 @@ nav li {
   display: flex;
   align-items: center;
   margin: 20px;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .btn {
@@ -141,6 +149,9 @@ nav li {
 .page-header h1 {
   font-size: var(--font-xxl);
   margin: 0;
+  backdrop-filter: blur(10px);
+  background-color: rgba(235, 194, 225, 0.397);
+  color: rgb(112, 109, 109);
 }
 
 .page-header img {
