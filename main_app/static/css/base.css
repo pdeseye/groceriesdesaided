@@ -148,8 +148,7 @@ nav li {
   font-size: var(--font-xxl);
   margin: 0;
   backdrop-filter: blur(10px);
-  background-color: rgba(235, 194, 225, 0.397);
-  color: rgb(112, 109, 109);
+  color: teal;
 }
 
 .page-header img {
