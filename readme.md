@@ -2,9 +2,9 @@
 The inspiration behind Groceries Desai-ded because as someone who likes to take screen shots of handwritten grocery lists and email them to myself; I needed to find a single place to store the grocery lists in order to reference them in the future. This way I could avoid accidentally deleting the lists I emailed myself. I hope this app will not only help me but also help you to. 
 
 ## :camera: Groceries Desai-ded Screenshots
-![alt text](./images/grocery1.png)
-![alt text](./images/grocery2.png)
-![alt text](./images/grocery3.png)
+![alt text](main_app/static/images/grocery1.png)
+![alt text](main_app/static/images/grocery2.png)
+![alt text](main_app/static/images/grocery3.png)
 
 
 
