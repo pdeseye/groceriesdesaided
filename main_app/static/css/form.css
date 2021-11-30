@@ -26,6 +26,7 @@
 #id_item {
   margin-left: 30px;
 }
+
 .subsection-content input {
   border-radius: 15px;
   border: 2px solid teal;
@@ -38,7 +39,17 @@
 .subsection-content {
   margin-left: center;
 }
-
+.edit-add input {
+  border-radius: 10px;
+  margin: 0px;
+  border: teal solid 2px;
+  width: 800px;
+  color: teal
+}
+.edit-add label {
+  padding: 0px;
+  margin-left: 30px;
+}
 form {
   display : flex;
   flex-direction: column;
@@ -46,6 +57,9 @@ form {
   justify-content: center;
 }
 
+label {
+  color: teal;
+}
 
 table {
   padding: 0 40px;
@@ -55,7 +69,7 @@ table {
 
 th {
   text-align: left;
-  padding: 6px 20px 0 0;
+  padding: 6px 10px 0 0;
   font-weight: normal;
   vertical-align: top;
   font-size: var(--font-reg);
