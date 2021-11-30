@@ -17,6 +17,7 @@ You can check out my Trello board [HERE!](https://trello.com/b/J7TzgDSw/grocerie
 - Heroku
 - HTML
 - Python
+- Django
 
 ## :star:Future Additions:
 - Send text alerts to members

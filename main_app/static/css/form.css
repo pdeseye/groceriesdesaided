@@ -95,3 +95,9 @@ td > textarea {
   align-self: flex-end;
   margin-right: 40px;
 }
+
+.p {
+  font-size: 20px;
+  align-items: center;
+  position: center;
+}
