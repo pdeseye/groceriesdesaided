@@ -28,15 +28,15 @@ body {
   min-height: 100vh;
   --nav-bg: rgba(104, 197, 248, .7);
   --nav-bg-ff: rgba(104, 197, 248, .9);
-  --borders: rgb(36, 116, 248) solid 2px;
+  --borders: rgb(0,128,128) solid 2px;
   --text-color: rgb(17, 20, 17);
   --link-hover-color: rgb(16, 56, 158);
-  --button-bg: rgb(245, 245, 245);
+  --button-bg: rgba(245, 245, 245, 0.322);
   --button-bg-hover: rgb(226, 226, 226);
-  --submit: rgb(26, 128, 0);
-  --warn: rgb(255, 102, 0);
-  --danger: rgb(220, 20, 30);
-  --secondary: rgb(57, 57, 57);
+  --submit: rgb(0, 128, 128);
+  --warn: rgb(0,128,128);
+  --danger: rgb(0,128,128);
+  --secondary: rgb(0, 128, 128);
   --card-box-shadow: 5px 5px 6px -1px #AAA;
   --font-xtreme: 4.2rem;
   --font-xxl: 3.6rem;
@@ -47,9 +47,7 @@ body {
 }
 
 body {
-  background-image: url('https://data.whicdn.com/images/341694687/original.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+background-color : rgb(223, 150, 156)
 }
 
 header {
