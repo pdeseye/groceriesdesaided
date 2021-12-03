@@ -14,7 +14,7 @@ class Home(LoginView):
 
 @login_required
 def lists_index(request):
-  lists = List.objects.all()#.filter(user=request.user)
+  lists = List.objects.filter(user=request.user)
   return render(request, 'lists/index.html', { 'lists': lists })
 
 @login_required
